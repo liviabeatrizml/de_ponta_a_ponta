@@ -36,7 +36,7 @@ int main()
     printf("%i\n\n", soma);
     printf("       %i / %i\n\n", soma, quantidade);
 
-    media = soma/quantidade;
+    media = (float)soma/quantidade;
 
     printf("  --> Média: %.2f\n\n\n\n\n", media);
 
