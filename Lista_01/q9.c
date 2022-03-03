@@ -3,8 +3,7 @@
 
 int main() {
 
-    int i, j = 0, contador = 10;
-    char numero;
+    int i, j = 0;
 
     for (i = -1; i <= 127; i++){
 
