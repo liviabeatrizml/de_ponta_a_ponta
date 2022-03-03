@@ -9,6 +9,8 @@ int main(){
     scanf("%d", &num);
 
     isPerfect(num);
+
+    return (0);
 }
 
 int isPerfect(int numero){
