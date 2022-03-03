@@ -9,4 +9,5 @@ int main(){
         printf("\t %.0f C \t\t\t\t  %.1f F \n", i, (i * 1.8) + 32);
     }
 
+    return (0);
 }
