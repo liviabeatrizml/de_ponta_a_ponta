@@ -38,7 +38,7 @@ int main()
 
     media = (float)soma/quantidade;
 
-    printf("  --> Média: %.2f\n\n\n\n\n\n", media);
+    printf("  --> Média: %.2f\n\n\n\n\n", media);
 
     return (0);
 }
