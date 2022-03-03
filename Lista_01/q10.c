@@ -24,4 +24,6 @@ int main(){
 
     printf(")\n\t Pi = 4 * %f", result);
     printf("\n\t Pi = %f", 4 * result);
+
+    return (0);
 }
