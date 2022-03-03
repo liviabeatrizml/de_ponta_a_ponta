@@ -12,4 +12,6 @@ int main(){
     }
 
     printf("O fatorial de %d eh igual a %d.\n", x, fat);
+
+    return (0);
 }
