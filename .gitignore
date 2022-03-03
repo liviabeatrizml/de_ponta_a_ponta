@@ -1,4 +1,5 @@
 .vscode/settings.json
+<<<<<<< HEAD
 q1.exe
 q2.exe
 q3.exe
@@ -27,3 +28,9 @@ q24.exe
 q25.exe
 q26.exe
 
+=======
+q20.exe
+a.exe
+q2.exe
+.vscode/launch.json
+>>>>>>> 4feabe1e5c6cd57f4096eb3f32e141a7a8f1bdd7
