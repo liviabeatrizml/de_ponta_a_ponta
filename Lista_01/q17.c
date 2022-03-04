@@ -96,8 +96,8 @@ int main()
 
     segundo = segundoTempo(horasRestantes, minutosRestantes, segundosRestantes);
 
-    printf("\n\n--> PRIMEIRO TEMPO: %ih%imin%is equivale à %i segundos.\n", horas, minutos, segundos, primeiro);
-    printf("--> SEGUNDO TEMPO: %ih%imin%is equivale à %i segundos.\n\n\n", horasRestantes, minutosRestantes, segundosRestantes, segundo);
+    printf("\n\n\n--> PRIMEIRO TEMPO: %ih%imin%is equivale à %i segundos.\n", horas, minutos, segundos, primeiro);
+    printf("--> SEGUNDO TEMPO: %ih%imin%is equivale à %i segundos.\n\n\n\n\n", horasRestantes, minutosRestantes, segundosRestantes, segundo);
 
     return (0);
 }
