@@ -1,31 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int primeiroTempo(int horas, int minutos, int segundos)
-{
-    int primeiro;
-
-    if (horas > 12)
-    {
-        horas = 12;
-        primeiro = (horas * 3600);
-    }
-    else
-    {
-        horas = horas;
-        primeiro = (horas * 3600) + (minutos * 60) + segundos;
-    }
-
-    return (primeiro);
-}
-
-int segundoTempo(int horas, int minutos, int segundos)
-{
-    int segundo;
-
-    segundo = (horas * 3600) + (minutos * 60) + segundos;
-    return (segundo);
-}
+int primeiroTempo(int horas, int minutos, int segundos);
+int segundoTempo(int horas, int minutos, int segundos);
 
 int main()
 {
@@ -100,4 +77,30 @@ int main()
     printf("--> SEGUNDO TEMPO: %ih%imin%is equivale à %i segundos.\n\n\n\n\n", horasRestantes, minutosRestantes, segundosRestantes, segundo);
 
     return (0);
+}
+
+int primeiroTempo(int horas, int minutos, int segundos)
+{
+    int primeiro;
+
+    if (horas > 12)
+    {
+        horas = 12;
+        primeiro = (horas * 3600);
+    }
+    else
+    {
+        horas = horas;
+        primeiro = (horas * 3600) + (minutos * 60) + segundos;
+    }
+
+    return (primeiro);
+}
+
+int segundoTempo(int horas, int minutos, int segundos)
+{
+    int segundo;
+
+    segundo = (horas * 3600) + (minutos * 60) + segundos;
+    return (segundo);
 }
