@@ -8,6 +8,7 @@ int main(){
     printf("\nFATORIAL\n");
     printf("Informe o numero para calcular o fatorial!\n-> ");
     scanf("%d",&n);
+    
         if(n < 0){
             printf("NUMERO INVALIDO");
         }else{
