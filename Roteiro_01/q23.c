@@ -3,39 +3,26 @@
 
 int inverte(int n);
 
-int main()
-{
+int main(){
 	int numero;
 
 	printf("Informe um numero: ");
 	scanf("%d", &numero);
 
-	int ret = inverte(numero);
-	//printf("Numero invertido: %d", ret);
+	inverte(numero);
 
 	return (0);
 }
 
-int inverte(int n)
-{
-	int sobra, cont = 0;
+int inverte(int n){
+	int sobra = n;
 
-	if (n >= 0)
-	{
-		while (n != 0)
-		{
-			sobra = n % 10;
-			printf("%d", sobra);
-			n = n / 10;
-		}
+	if (n == 0){
 		printf("\n");
-		return n;
+		return (1);
 	}
-	else if (n < 1)
-	{
-		return (inverte(n * (-1)));
-		printf("\n");
-	}
+	
+	printf("%d", sobra % 10);
+
+	return inverte(n/10);
 }
-
-// Problema 23 Funcao para inverter um numero. Exemplo: f (1234) = 4321
