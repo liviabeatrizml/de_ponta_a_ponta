@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int codProduto, quantProduto;
+    int codProduto, quantProduto, dia;
     float total = 0, auxTotal = 0;
 
     printf("Numero do produto | Preço de varejo\n");
@@ -11,34 +11,40 @@ int main(){
     printf("        4         |     1,95       \n");
     printf("        5         |     5,00       \n");
 
-    for (codProduto = 1; codProduto <= 5; codProduto++){
-        printf("Informe a quantidade vendida do produto %d: ", codProduto);
-        scanf("%d", &quantProduto);
+    
+        for (codProduto = 1; codProduto <= 5; codProduto++){
+            for(dia = 1; dia <= 7; dia++){
+            printf("\n%d dia da semana\n",dia);
+            printf("Informe a quantidade vendida do produto %d: ", codProduto);
+            scanf("%d", &quantProduto);
 
-        switch (codProduto){
-        case (1):
-            total = quantProduto * 3;
-            auxTotal = auxTotal + total;
-            break;
-        case (2):
-            total = quantProduto * 4;
-            auxTotal = auxTotal + total;
-            break;
-        case (3):
-            total = quantProduto * 2.8;
-            auxTotal = auxTotal + total;
-            break;
-        case (4):
-            total = quantProduto * 1.95 ;
-            auxTotal = auxTotal + total;
-            break;
-        case (5):
-            total = quantProduto * 5;
-            auxTotal = auxTotal + total;
-            break;    
+            switch (codProduto){
+            case (1):
+                total = quantProduto * 3;
+                auxTotal = auxTotal + total;
+                break;
+            case (2):
+                total = quantProduto * 4;
+                auxTotal = auxTotal + total;
+                break;
+            case (3):
+                total = quantProduto * 2.8;
+                auxTotal = auxTotal + total;
+                break;
+            case (4):
+                total = quantProduto * 1.95 ;
+                auxTotal = auxTotal + total;
+                break;
+            case (5):
+                total = quantProduto * 5;
+                auxTotal = auxTotal + total;
+                break;    
+            }
+            codProduto = 0;
+            printf("Total foi de: %.2f\n", total);
         }
-        printf("Total foi de: %.2f\n", total);
     }
+    
     printf("O total durante a semana foi de: R$%.2f\n\n",auxTotal);
     
     return 0;
