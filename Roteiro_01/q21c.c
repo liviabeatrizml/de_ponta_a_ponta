@@ -6,7 +6,7 @@ int main(){
     int n;
 
     printf("\nSEQUENCIA DE FIBONACCI\n");
-    printf("Informe o enesimo termo que deseja na sequencia\n-> ");
+    printf("Informe o enesimo termo que deseja verificar na sequencia\n-> ");
     scanf("%d",&n);
     printf("\nO %d termo da sequencia eh %d\n\n",n,Fibonacci(n));
 
