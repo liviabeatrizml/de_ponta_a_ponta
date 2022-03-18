@@ -5,7 +5,7 @@ int MDC(int num, int num2);
 int main(){
     int n, n2;
 
-    printf("MAXIMO DIVISOR COMUM");
+    printf("MAXIMO DIVISOR COMUM\n");
     printf("Informe dois numeros para saber seu maximo divisor comum:\n-> ");
     scanf("%d",&n);
     printf("-> ");
