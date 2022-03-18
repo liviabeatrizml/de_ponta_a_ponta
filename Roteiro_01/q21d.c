@@ -8,6 +8,7 @@ int main(){
     printf("\nNUMERO PRIMO\n");
     printf("Informe um numero para saber se ele eh primo:\n-> ");
     scanf("%d",&n);
+    
         if(isPrime(n, 2)){
             printf("\nO numero %d eh primo\n\n",n);
         } else {
