@@ -5,7 +5,7 @@ int Fatorial(int num);
 int Fibonacci(int num);
 int isPrime(int num, int contador);
 
-//Questao 21 com todas as alternativas finalizadas, apenas com um switch separando cada, existindo assim a opcao de escolha.
+//Questao 21 com todas as alternativas finalizadas separadas por um switch cada funcao, existindo assim a opcao de escolha.
 
 int main(){
     int n, n2, opcao;
