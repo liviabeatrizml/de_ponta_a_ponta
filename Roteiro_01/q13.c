@@ -1,102 +1,127 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
+int validacao(int dia, int mes, int ano);
 
-    int dia, mes, ano, diaDaSemana;
+int main(){
+    int condicao, dia, mes, ano, somaVariaveis, chaveMes, chaveAno, diaSemana, variante = 0;
 
-    while (dia > 2 && mes > 3)
-    {
+    do{
+        printf("Dia: ");
+        scanf("%d", &dia);
+        printf("Mes: ");
+        scanf("%d", &mes);
+        printf("Ano: ");
+        scanf("%d", &ano);
 
-        do
-        {
-            printf("--> Digite um DIA (ex:07):\n");
-            printf("          ");
-            scanf("%i", &dia);
+        condicao = validacao(dia, mes, ano);
 
-            if (dia < 1 || dia > 31)
-            {
-                system("clear");
-                printf("DIA ERRADO, TENTE NOVAMENTE!\n\n");
-            }
-        } while (dia < 1 || dia > 31);
+    } while (condicao != 1);
 
-        system("clear");
+    switch (mes){
+        case 1:
+        case 10:
+            chaveMes = 1;
+            break;
+        case 2:
+        case 3:
+        case 11:
+            chaveMes = 4;
+            break;    
+        case 4:
+        case 7:
+            chaveMes = 0;
+            break;
+        case 5:
+            chaveMes = 2;
+            break;
+        case 6:
+            chaveMes = 5;
+            break;
+        case 8:
+            chaveMes = 3;
+            break;
+        case 9:
+        case 12:
+            chaveMes = 6;  
+            break;
+    }
 
-        do
-        {
-            printf("--> Digite um MÊS (ex:12):\n");
-            printf("        %i/", dia);
-            scanf("%i", &mes);
+    chaveAno = ((((ano%100)/4)+((ano%100)%7))%7);
+    variante = (1900/100)-(ano/100);
+    somaVariaveis = (dia + chaveMes + (chaveAno+ variante));
 
-            if (mes < 1 || mes > 12)
-            {
-                system("clear");
-                printf("MÊS ERRADO, TENTE NOVAMENTE!\n\n");
-            }
-        } while (mes < 1 || mes > 12);
+    printf("O dia %d/%d/%d caiu em um", dia, mes, ano);
 
-        system("clear");
+    diaSemana = (somaVariaveis - ((somaVariaveis/7)*7));
 
-        do
-        {
-            printf("--> Digite um ANO (ex:1999):\n");
-            printf("        %i/%i/", dia, mes);
-            scanf("%i", &ano);
+    switch (diaSemana){
+        case 1:
+            printf(" DOMINGO \n");
+            break;
+        case 2:
+            printf(" SEGUNDA-FEIRA \n");
+            break;
+        case 3:
+            printf(" TERCA-FEIRA \n");
+            break;
+        case 4:
+            printf(" QUARTA-FEIRA \n");
+            break;
+        case 5:
+            printf(" QUINTA-FEIRA \n");
+            break;
+        case 6:
+            printf(" SEXTA-FEIRA \n");
+            break;
+        case 0:
+            printf(" SABADO \n");
+            break;
+    }
+    return (0);
+}
 
-            if (ano < 1 || ano > 2022)
-            {
-                system("clear");
-                printf("ANO ERRADO, TENTE NOVAMENTE!\n\n");
-            }
-        } while (ano < 1 || ano > 2022);
+int validacao(dia, mes, ano){
+    if((dia < 1 && dia > 31) && ((mes < 1 && mes > 12)) && ano < 1){
+        printf("\n\t Data incorreta!!! Insira novamente\n\n");
 
-        system("clear");
+        return (0);
+    } else if(ano % 4 != 0 && mes == 2){
+        if(dia > 28){
+            printf("\n\t Data incorreta!!! Insira novamente\n\n");
 
-        if(dia > 2 && mes > 3) {
-            printf("   APENAS DATAS INFERIORES \n        A 02/03/2022\n\n");
+            return (0);
         }
     }
 
-    printf("\n\n--> DATA ESCOLHIDA: %i/%i/%i\n\n", dia, mes, ano);
-
-    diaDaSemana = (dia + 2 * mes + ((3 * mes + 3 * 1) / 5) + ano + ano / 4 - ano / 100 + ano / 400 + 2) % 7;
-
-    if (diaDaSemana == 1)
-    {
-        printf("--> DIA DA SEMANA: DOMINGO\n\n\n\n");
-    }
-
-    if (diaDaSemana == 2)
-    {
-        printf("--> DIA DA SEMANA: SEGUNDA\n\n\n\n");
-    }
-
-    if (diaDaSemana == 3)
-    {
-        printf("--> DIA DA SEMANA: TERÇA\n\n\n\n");
-    }
-
-    if (diaDaSemana == 4)
-    {
-        printf("--> DIA DA SEMANA: QUARTA\n\n\n\n");
-    }
-
-    if (diaDaSemana == 5)
-    {
-        printf("--> DIA DA SEMANA: QUINTA\n\n\n\n");
-    }
-
-    if (diaDaSemana == 6)
-    {
-        printf("--> DIA DA SEMANA: SEXTA\n\n\n\n");
-    }
-
-    if (diaDaSemana == 0)
-    {
-        printf("--> DIA DA SEMANA: SÁBADO\n\n\n\n");
-    }
-
-    return (0);
+    return (1);
 }
+
+/* CHAVE DOS DIAS
+
+    1 = Domingo
+    2 = Segunda-feira
+    3 = Terça-feira
+    4 = Quarta-feira
+    5 = Quinta-feira
+    6 = Sexta-feira
+    0 = Sábado
+
+                    */
+
+/* CHAVE DOS MÊS
+
+    Janeiro = 1
+    Fevereiro = 4
+    Março = 4
+    Abril = 0
+    Maio = 2
+    Junho = 5
+    Julho = 0
+    Agosto = 3 
+    Setembro = 6
+    Outubro = 1
+    Novembro = 4
+    Dezembro = 6
+
+                    */
