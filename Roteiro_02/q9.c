@@ -1,14 +1,19 @@
 #include <stdio.h>
 
-void apagar(int id);
+void editarTelefone(int id);
 
 int main()
 {
-        apagar(3);
+    int id;
+
+    printf("Informe o ID que deseja modificar: ");
+    scanf("%d", &id);
+    editarTelefone(id);
 }
 
-void apagar(int idA)
+void editarTelefone(int idA)
 {
+    // subscreve o agenda.dat no agenda_aux.dat
     FILE *f1 = fopen("agenda_aux.dat", "w");
 
     int id;
@@ -16,6 +21,7 @@ void apagar(int idA)
     char profissao[80];
     char telefone[80];
 
+    // abre agenda.dat como leitura
     FILE *f2 = fopen("agenda.dat", "r");
 
     if (!f2)
@@ -23,13 +29,31 @@ void apagar(int idA)
         printf("Impossível abrir o arquivo.\n");
     }
 
+    // enquanto o final do arquivo f1 (agenda_aux.dat) for diferente de f2 (agenda.dat)
     while (!feof(f2))
     {
+        // TERMINAL
+        // Efetua leitura formatada em um arquivo
+        // o que aparece no agenda_aux.dat
         fscanf(f2, "%d %s %s %s", &id, nome, profissao, telefone);
-        printf("(%d)  (%s)  (%s)\n", id, nome, telefone);
+        // terminal não mostra a profissão
+        // printf("(%d)  (%s)  (%s)\n", id, nome, telefone);
+
+        if (id == idA)
+        {
+            printf("Informe o novo número de telefone: ");
+            scanf("%s", telefone);
+            // Efetua impressão formatada em um arquivo
+            // o que vai aparecer no novo arquivo formatado (agenda_aux.dat)
+            fprintf(f1, "%d %s %s %s\n", id, nome, profissao, telefone);
+        }
+
+        // remove tudo
         if (id != idA)
         {
-            fprintf(f1, "%d %s %s %s", id, nome, profissao, telefone);
+            // Efetua impressão formatada em um arquivo
+            // o que vai aparecer no novo arquivo formatado (agenda_aux.dat)
+            fprintf(f1, "%d %s %s %s\n", id, nome, profissao, telefone);
         }
     }
     fclose(f1);
