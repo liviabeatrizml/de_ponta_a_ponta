@@ -45,7 +45,6 @@ void exportaContato(int idA)
             strcat(nome, ".txt");
             fclose(f1);
             rename("nome.txt", nome);
-
         }
     }
     fclose(f2);
