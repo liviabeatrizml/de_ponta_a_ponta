@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void exportaContato(int id);
 
@@ -13,7 +14,7 @@ int main()
 
 void exportaContato(int idA)
 {
-    // subscreve o agenda.dat no agenda_aux.dat
+    // sobscreve o agenda.dat no agenda_aux.dat
     FILE *f1 = fopen("nome.txt", "w");
 
     int id;
@@ -41,7 +42,9 @@ void exportaContato(int idA)
             // Efetua impressão formatada em um arquivo
             // o que vai aparecer no novo arquivo formatado (agenda_aux.dat)
             fprintf(f1, "%d %s %s %s\n", id, nome, profissao, telefone);
+            strcat(nome, ".txt");
             rename("nome.txt", nome);
+
         }
     }
     fclose(f1);
