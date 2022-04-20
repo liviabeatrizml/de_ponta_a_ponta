@@ -43,11 +43,10 @@ void exportaContato(int idA)
             // o que vai aparecer no novo arquivo formatado (agenda_aux.dat)
             fprintf(f1, "%d %s %s %s\n", id, nome, profissao, telefone);
             strcat(nome, ".txt");
+            fclose(f1);
             rename("nome.txt", nome);
-
         }
     }
-    fclose(f1);
     fclose(f2);
     // remove("agenda.dat");
 }
