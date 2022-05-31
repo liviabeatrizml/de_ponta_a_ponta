@@ -1,5 +1,5 @@
 # Algoritmo BigNumbers
-> Na matéria de Laboratório de Algoritmos vimos como utilizar - de forma rápida e simples - números inteiros gigantes que tem seu manuseio complexo e complicado, isto é, os big numbers, consequentemente estudamos também as suas operações, sendo elas: adição, subtração, multiplicação e vezes 10. E para a pratica e compreensão de mais um conteúdo passado em sala, utilizamos o uso do tempo de execução - clock.
+> Na matéria de Laboratório de Algoritmos vimos como utilizar - de forma rápida e simples - números inteiros gigantes que tem seu manuseio complexo e complicado, isto é, os big numbers, consequentemente estudamos também as suas operações, sendo elas: adição, subtração, multiplicação e vezes 10. E para a prática e compreensão de mais um conteúdo passado em sala, utilizamos o uso do tempo de execução - clock.
 
 ## :computer: Desenvolvimento do código
 >Para melhor compreensão do algoritmo iremos explicar o código por completo como foi desenvolvido, mostrando as possíveis saídas e como chegamos a tais resultados demonstrando com imagens.
@@ -21,7 +21,7 @@ Por fim é criado as variáveis que serão impressas e chamada as funções, na 
 
 ### **:heavy_plus_sign:** Operação de adição
 No processo de soma entre dois big numbers cada número ocupa um vetor. É necessário, no entanto, o preenchimento por inteiro de cada índice do vetor de baixo para cima, a fim de que os elementos da soma, correspondente a cada algarismo, se encontre devidamente ordenado. 
-Por exemplo, ṕara que a soma entre os dois big numbers abaixo seja efetivada, a posição dos elementos devem estar organizados da direita para a esquerda. Ou seja, percorrendo o vetor de trás para frente, é preciso que o elemento 5 do vetor V2 ocupe o índice equivalente a mesma posição do elemento 2 no vetor V1.
+Por exemplo, para que a soma entre os dois big numbers abaixo seja efetivada, a posição dos elementos devem estar organizados da direita para a esquerda. Ou seja, percorrendo o vetor de trás para frente, é preciso que o elemento 5 do vetor V2 ocupe o índice equivalente a mesma posição do elemento 2 no vetor V1.
 
 ![Listas](components/imagem_soma01.png)
 
@@ -34,7 +34,7 @@ Depois desse primeiro passo a soma propriamente dita se inicia. A princípio, é
 ![Soma](components/imagem_soma03.png)
 
 Posteriormente, a soma entre os elementos das listas será realizada sucessivamente, da direita para a esquerda, até o índice zero. 
-Para os casos em que a soma entre dois valores seja maior que 9 o “vai 1” ocorre. Dessa forma é atualizado o valor para guardar o número 1 que será somado com os números à sua frente na próxima execução. 
+Para os casos em que a soma entre dois valores seja maior que 9 o “vai 1” ocorre. Dessa forma, é atualizado o valor para guardar o número 1 que será somado com os números à sua frente na próxima execução. 
 No fim da execução a soma completa é retornada.
 
 ![Soma](components/imagem_soma04.png)
@@ -83,12 +83,12 @@ Logo após, de forma análoga ao processo da soma, o decremento é realizado e o
 
 ![multiplicacao](components/imagem_multiplicacao02.png)
 
-Depois disso, a cada multiplicação que se encerra a contabilização da quantidade de casas da direita para a esquerda é realizada. Isso ocorre em relação ao tamanho da menor lista. Esse raciocínio será expresso pelo seguinte código:
+Depois disso, a cada multiplicação que se encerra a contabilização da quantidade de casas, da direita para a esquerda, é realizada. Isso ocorre em relação ao tamanho da menor lista. Esse raciocínio será expresso pelo seguinte código:
 
 ![multiplicacao](components/imagem_multiplicacao03.png)
 
-No código acima o último elemento da ListaB será multiplicado, de trás para frente, com todos os outros elementos da ListaA. Logo em seguida esse mesmo processo ocorrerá com a penúltimo elemento, e depois com o antepenúltimo até o fim da lista, posição [0]. O i será contabilizado a cada final do processo.
-A cada fim de linha, ou seja, depois de cada multiplicação individual será necessário pular mais uma casa à esquerda. Nesse sentido, o valor zero deverá ser inserido de acordo com o valor do contador “j” evidente no código abaixo. Dessa forma, para cada j = i, um elemento zero é introduzido:
+No código acima o último elemento da ListaB será multiplicado, de trás para frente, com todos os outros elementos da ListaA. Logo em seguida esse mesmo processo ocorrerá com a penúltimo elemento, e depois com o antepenúltimo até o fim da lista, posição [0]. O "i" será contabilizado a cada final do processo.
+A cada fim de linha, ou seja, depois de cada multiplicação individual, será necessário pular mais uma casa à esquerda. Nesse sentido, o valor zero deverá ser inserido de acordo com o valor do contador “j” evidente no código abaixo. Dessa forma, para cada j = i, um elemento zero é introduzido:
 
 ![multiplicacao](components/imagem_multiplicacao04.png)
 
@@ -96,7 +96,7 @@ Posteriormente, a multiplicação propriamente dita entrará em execução. A va
 
 ![multiplicacao](components/imagem_multiplicacao05.png)
 
-O valor da lista Aux1 é inserido uma casa à esquerda para que seja somado com o resultado da multiplicação que virá logo à frente. itA- - insere o último dígito correspondente ao resultado da multiplicação e a cont++ é atualizada para que cada operação só seja efetuada enquanto o contador for menor que o tamanho da lista:
+O valor da lista Aux1 é inserido uma casa à esquerda para que seja somado com o resultado da multiplicação que virá logo à frente. itA- - insere o último dígito correspondente ao resultado da multiplicação e cont++ é atualizada para que cada operação só seja efetuada enquanto o contador for menor que o tamanho da lista:
 
 ![multiplicacao](components/imagem_multiplicacao06.png)
 
@@ -110,7 +110,7 @@ Por fim o resultado geral, proveniente da soma de todas as multiplicações, é 
 ![multiplicacao](components/imagem_multiplicacao08.png)
 
 ### :heavy_multiplication_x: :keycap_ten: Operação de vezes 10
-A operação mais simples do exercício, porém, não menos importante, de maneira análoga, sabemos que ao multiplicar qualquer número por 10, essa multiplicação ocorrera apenas o acrescentado do zero ao final desse número, com essa lógica foi possível realizar no código o mesmo sentido, onde iremos pegar a Lista com os valores, com a função push_back(0) é inserido ao final da Lista um número 0 e de certa forma realizado a multiplicação, por fim é retornado o novo valor.
+A operação mais simples do exercício, porém, não menos importante, de maneira análoga, sabemos que ao multiplicar qualquer número por 10, essa multiplicação ocorrerá apenas o acrescentado do zero ao final desse número, com essa lógica foi possível realizar no código o mesmo sentido, onde iremos pegar a Lista com os valores, com a função push_back(0) é inserido ao final da Lista um número 0 e de certa forma realizado a multiplicação, por fim é retornado o novo valor.
 
 ![vezes 10](components/imagem_vezes10.png)
 
