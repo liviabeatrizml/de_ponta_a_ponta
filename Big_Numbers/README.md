@@ -74,7 +74,7 @@ Por fim o resultado geral, proveniente da soma de todas as multiplicações, é 
 A operação mais simples do exercício, porém, não menos importante, de maneira análoga, sabemos que ao multiplicar qualquer número por 10, essa multiplicação ocorrera apenas o acrescentado do zero ao final desse número, com essa lógica foi possível realizar no código o mesmo sentido, onde iremos pegar a Lista com os valores, com a função push_back(0) é inserido ao final da Lista um número 0 e de certa forma realizado a multiplicação, por fim é retornado o novo valor.
 ![vezes 10](components/imagem_vezes10.png)
 
-### :memo: Possíveis Saídas
+### :memo: Possível Saída
 ![saida](components/saida.png)
 
 ---
