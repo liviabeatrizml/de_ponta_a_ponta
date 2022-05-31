@@ -114,7 +114,7 @@ A operação mais simples do exercício, porém, não menos importante, de manei
 
 ![vezes 10](components/imagem_vezes10.png)
 
-### :memo: Possível Saída
+### :memo: Saída esperada
 ![saida](components/saida.png)
 
 ---
