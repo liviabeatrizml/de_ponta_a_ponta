@@ -21,7 +21,7 @@ Por fim é criado as variáveis que serão impressas e chamada as funções, na 
 
 ### **:heavy_plus_sign:** Operação de adição
 No processo de soma entre dois big numbers cada número ocupa um vetor. É necessário, no entanto, o preenchimento por inteiro de cada índice do vetor de baixo para cima, a fim de que os elementos da soma, correspondente a cada algarismo, se encontre devidamente ordenado. 
-Por exemplo, na soma dos dois big numbers abaixo, a posição dos elementos devem estar organizados da direita para a esquerda para que a soma seja efetivada. Ou seja, percorrendo o vetor de trás para frente, é preciso que o elemento 5 do vetor V2 ocupe o índice equivalente a mesma posição do elemento 2 no vetor V1.
+Por exemplo, ṕara que a soma entre os dois big numbers abaixo seja efetivada, a posição dos elementos devem estar organizados da direita para a esquerda. Ou seja, percorrendo o vetor de trás para frente, é preciso que o elemento 5 do vetor V2 ocupe o índice equivalente a mesma posição do elemento 2 no vetor V1.
 
 ![Listas](components/imagem_soma01.png)
 
