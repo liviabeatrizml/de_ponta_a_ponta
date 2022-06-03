@@ -117,8 +117,11 @@ No arquivo graficos.plt as primeiras linhas são de determinação e orientaçã
  - set xlabel "Número de pontos" : define o titulo do eixo x números de pontos e a sua quantidade
  - set logscale y : define a escala de logaritmo
  - set key inside left : define o menu de titulo a esquerda
+ - 
 ![gnuplot](components/gnuplot_set.png)
+
 Após essa determinação, é realizado os plot referente aos tempos.txt calculados, que irão formar as linhas no gráfico, em cada linha é definido uma cor e um nome escolhido para tais algoritmos de ordenação.
+
 ![gnuplot](components/gnuplot_linhas.png)
 
 ### **:chart_with_upwards_trend:** Saída
