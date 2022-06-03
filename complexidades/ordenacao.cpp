@@ -243,7 +243,6 @@ void combSort(int *x, int tamanho){
     while (iP!=1) //enquanto o intervlo for != 1
     {
         iP = int (iP/1.3); //ler o tamanho do vetor e divide por 1.3
-        //SEU TIRAR ESSE IF O QUE ACONTECERIA?
         if (iP < 1){ //intervlo das posições não pode ser < 1, não há como comparar
             iP=1;
         }
