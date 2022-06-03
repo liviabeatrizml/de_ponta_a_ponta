@@ -21,12 +21,15 @@ A ultima função, foi desenvolvida para registrar os números aleatórios que f
 ### Insertion Sort
 O objetivo do Insertion Sort é seguir uma ordenação de forma crescente/construtivamente enquanto faz as comparações, onde a cada interação com um número, colocando-o em seu lugar.
 A lógica por trás do algoritmo se inicia com um FOR, que vai percorrer todo o vetor/lista. Inicialmente é selecionado o número – denominado de aux – que será comparado com seu anterior – x[j].
+
 ![insertion](components/i1.png)
 
 Após isso, é usado um WHILE para fazer a comparação e caso o número comparado seja menor e valor de J for positivo, é feito um swap (troca entre os elementos), seguindo é feito um decréscimo em j, que corresponde ao índice do vetor, com o intuído de fazer novamente uma comparação anterior ao que já foi feita a comparação e troca. Agora caso, o número x[j] for maior, o WHILEé interrompido ou mesmo ele nem entra no WHILE.
+
 ![insertion](components/i2.png)
 
 Caso o WHILE seja interrompido/finalizado é feita uma ultima troca para que a ordenação se mantenha constante e para dar continuidade com o FOR.
+
 ![insertion](components/i3.png)
 
 ### Selection Sort
@@ -35,21 +38,26 @@ No selection sort ocorre a seleção de um elemento do vetor. À medida que o ar
 ![selection](components/s1.png)
 
 Usando o exemplo da lista acima, o número 241 é o primeiro elemento do vetor, ocupando a posição x[0], enquanto a posição que determinado valor ocupar for menor que o tamanho do array menos 1 (1 corresponde ao espaço ocupado por aquele elemento) o vetor é percorrido:
+
 ![selection](components/s2.png)
 
 Para que a comparação se torne possível é preciso incrementar um pulo até o final da lista
+
 ![selection](components/s3.png)
 
 Caso o valor determinado armazenado no índice “j” seja menor que o número anterior (retido no índice mínimo) os elementos serão trocados
+
 ![selection](components/s4.png)
 
 É necessário também garantir a ordenação em relação ao valor das posições, para que nas próximas comparações os valores expressos anteriormente já estejam devidamente alocados
 
 ### Shell Sort
 No shell sort o número ímpar de pulos evita comparações desnecessárias. Nesse sentido, na última ordenação o número de pulos precisa ser igual a 1 a fim de garantir a ordenação de toda a lista.
+
 ![shell](components/sh1.png)
 
 Enquanto os pulos forem maiores maiores que 1, o intervalo entre posições para a comparação de elementos é atualizado
+
 ![shell](components/sh2.png)
 
 Ocorre a troca de elementos caso o número contido em uma posição mais à frente seja menor do que um valor que ocupa alguma coisa posição anterior, caso contrário os valores são mantidos em suas respectivas posições
@@ -57,12 +65,14 @@ Ocorre a troca de elementos caso o número contido em uma posição mais à fren
 
 ### Comb Sort
 No comb sort o tamanho do vetor é contabilizado e enquanto o intervalo entre as posições ocupadas pelos elementos for diferente que 1 a ordenação é realizada
+
 ![comb](components/c1.png)
 
 Enquanto a condição for satisfeita, o tamanho do vetor é dividido por 1.3. Caso o intervalo entre posição seja menor que 1 não será possível fazer comparações
 ![comb](components/c2.png)
 
 A partir do resultado da divisão entre o tamanho do vetor por 1.3 é que a ordenação irá acontecer. Ou seja, se o vetor tiver tamanho 10 o resultado inteiro da divisão por 1.3 será 7. Dessa forma, os valores a serem comparados inicialmente serão os que ocupam a primeira e a sétima posição, depois a segunda e oitava posições, terceira e nona… Depois disso, o resultado da divisão anterior (7) será dividido por 1,3 e o mesmo processo será realizado até que toda a lista fique ordenada.
+
 ![comb](components/c3.png)
 
 ### Heap Sort
@@ -74,6 +84,7 @@ Essa função tem como propósito de dividir a lista e ir fazendo as comparaçõ
 ![heap](components/h1.png)
 
 Inicialmente a função é composta por um FOR que irá executar até que (n/2) – 1 for negativo, pois isso remete os níveis em que a árvore desce por assim dizer. Dentro desse for terá a chamada da função _heapify,_ que será responsável por comparar e fazer as trocas.
+
 ![heap](components/h2.png)
 
 A função finaliza com um último FOR, que tem como objetivo de varrer novamente a lista fazendo as trocas necessárias e a comparação dos elementos na lista com a função _heapify_.
